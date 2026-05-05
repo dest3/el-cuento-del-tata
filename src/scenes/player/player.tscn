@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://fq2yplf0f2a5"]
+
+[ext_resource type="Script" uid="uid://bjci8a3508w2l" path="res://src/scripts/player/player.gd" id="1_swhsd"]
+[ext_resource type="Texture2D" uid="uid://b1yvs8n04cori" path="res://icon.svg" id="2_qopur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qopur"]
+size = Vector2(122, 124)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qopur"]
+points = PackedVector2Array(202, 113, 0, 0, 203, -128)
+
+[node name="Player" type="CharacterBody2D" unique_id=1650520485]
+script = ExtResource("1_swhsd")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=367454266]
+texture = ExtResource("2_qopur")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186074996]
+shape = SubResource("RectangleShape2D_qopur")
+
+[node name="ligth" type="CollisionShape2D" parent="." unique_id=204773319]
+shape = SubResource("ConvexPolygonShape2D_qopur")
+debug_color = Color(0.6760033, 0.5061017, 0.029652009, 0.41960785)
