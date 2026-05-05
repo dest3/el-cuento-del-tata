@@ -5,7 +5,6 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 
 
-
 func _physics_process(delta: float) -> void:
 	movement()
 	ligth_controler()
