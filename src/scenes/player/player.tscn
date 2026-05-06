@@ -18,6 +18,13 @@ texture = ExtResource("2_qopur")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186074996]
 shape = SubResource("RectangleShape2D_qopur")
 
-[node name="ligth" type="CollisionShape2D" parent="." unique_id=204773319]
+[node name="Area2D" type="Area2D" parent="." unique_id=1289135866]
+
+[node name="ligth" type="CollisionShape2D" parent="Area2D" unique_id=204773319]
+position = Vector2(63, -1)
 shape = SubResource("ConvexPolygonShape2D_qopur")
 debug_color = Color(0.6760033, 0.5061017, 0.029652009, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2126642249]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

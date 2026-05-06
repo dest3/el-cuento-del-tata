@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-@onready var ligth: CollisionShape2D = $ligth
+
+@onready var ligth: CollisionShape2D = $Area2D/ligth
+@onready var area_2d: Area2D = $Area2D
 
 @export var SPEED = 300.0
 
@@ -20,8 +22,12 @@ func movement():
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
 
-
 func ligth_controler():
 	#hace que la luz apunte al mouse todo el tiempo 
-	var mouse = get_global_mouse_position()
-	ligth.look_at(mouse)
+	if ligth:
+		var mouse = get_global_mouse_position()
+		area_2d.look_at(mouse)
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Enemy:
+		body.change()
