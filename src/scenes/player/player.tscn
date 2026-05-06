@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bjci8a3508w2l" path="res://src/scripts/player/player.gd" id="1_swhsd"]
 [ext_resource type="Texture2D" uid="uid://b1yvs8n04cori" path="res://icon.svg" id="2_qopur"]
+[ext_resource type="Texture2D" uid="uid://dlc2pcbt1rbnd" path="res://assets/textures/512x512 textures  (1).png" id="3_n52bt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qopur"]
 size = Vector2(122, 124)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qopur"]
-points = PackedVector2Array(202, 113, 0, 0, 203, -128)
+points = PackedVector2Array(245, 68, 0, 0, 241, -73)
 
 [node name="Player" type="CharacterBody2D" unique_id=1650520485]
 script = ExtResource("1_swhsd")
@@ -24,6 +25,15 @@ shape = SubResource("RectangleShape2D_qopur")
 position = Vector2(63, -1)
 shape = SubResource("ConvexPolygonShape2D_qopur")
 debug_color = Color(0.6760033, 0.5061017, 0.029652009, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="Area2D" unique_id=1451061099]
+position = Vector2(300.00003, -5.000001)
+rotation = 1.5422064
+color = Color(1, 1, 0.33333334, 1)
+energy = 3.05
+texture = ExtResource("3_n52bt")
+texture_scale = 0.9
+height = 219.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2126642249]
 
