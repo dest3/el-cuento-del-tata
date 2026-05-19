@@ -16,37 +16,43 @@ size = Vector2(9507, 368)
 [node name="lvl1" type="Node2D" unique_id=1888748096]
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1962407457]
-scroll_scale = Vector2(0.7, 0.7)
+scroll_scale = Vector2(0.7, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="9FondoDithering" type="Sprite2D" parent="Parallax2D2" unique_id=1149904835]
 texture = ExtResource("1_ade6e")
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=528286205]
-scroll_scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.5, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="7Nubes" type="Sprite2D" parent="Parallax2D3" unique_id=758635888]
 texture = ExtResource("2_joogd")
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=714168796]
-scroll_scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="6Mestita" type="Sprite2D" parent="Parallax2D4" unique_id=1689562249]
 texture = ExtResource("3_82or6")
 
 [node name="Parallax2D5" type="Parallax2D" parent="." unique_id=1896729331]
-scroll_scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.2, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="5ArbolesAtras" type="Sprite2D" parent="Parallax2D5" unique_id=156445]
 texture = ExtResource("4_l7wyk")
 
 [node name="Parallax2D6" type="Parallax2D" parent="." unique_id=1764955729]
-scroll_scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="4Lomitas" type="Sprite2D" parent="Parallax2D6" unique_id=779141562]
 texture = ExtResource("5_cq6xx")
 
 [node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1113775047]
-scroll_scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="3Piso" type="Sprite2D" parent="Parallax2D7" unique_id=1238912618]
 texture = ExtResource("6_v85kb")
@@ -58,13 +64,14 @@ position = Vector2(-35.5, 1215)
 shape = SubResource("RectangleShape2D_82or6")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=279214056]
-scroll_scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.2, 0)
 
 [node name="8Luna" type="Sprite2D" parent="Parallax2D" unique_id=346437448]
 texture = ExtResource("7_71fi2")
 
 [node name="Parallax2D8" type="Parallax2D" parent="." unique_id=739038817]
-scroll_scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(9600, 0)
 
 [node name="1RocasYPlantas" type="Sprite2D" parent="Parallax2D8" unique_id=1984079057]
 texture = ExtResource("8_qwj6g")
