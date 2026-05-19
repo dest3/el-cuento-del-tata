@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://csojis7w72dx5"]
+
+[ext_resource type="Texture2D" uid="uid://cf00kb1k0qsgf" path="res://assets/sprites/Escenario/9 - Fondo Dithering.png" id="1_ade6e"]
+[ext_resource type="Texture2D" uid="uid://dmpgfvfj2dsxb" path="res://assets/sprites/Escenario/7 - Nubes.png" id="2_joogd"]
+[ext_resource type="Texture2D" uid="uid://cxxu3qnaa8jkw" path="res://assets/sprites/Escenario/6 - Mestita.png" id="3_82or6"]
+[ext_resource type="Texture2D" uid="uid://cxd51ey221kd3" path="res://assets/sprites/Escenario/5 - Arboles atras.png" id="4_l7wyk"]
+[ext_resource type="Texture2D" uid="uid://daiajwy5gvenp" path="res://assets/sprites/Escenario/4 - Lomitas .png" id="5_cq6xx"]
+[ext_resource type="Texture2D" uid="uid://t5bblg43swhr" path="res://assets/sprites/Escenario/3 - Piso.png" id="6_v85kb"]
+[ext_resource type="Texture2D" uid="uid://ferfckmyajhb" path="res://assets/sprites/Escenario/8 - Luna.png" id="7_71fi2"]
+[ext_resource type="Texture2D" uid="uid://d2sxga3yr3tck" path="res://assets/sprites/Escenario/1 - Rocas y plantas.png" id="8_qwj6g"]
+[ext_resource type="PackedScene" uid="uid://fq2yplf0f2a5" path="res://src/scenes/player/player.tscn" id="9_joogd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82or6"]
+size = Vector2(9507, 368)
+
+[node name="lvl1" type="Node2D" unique_id=1888748096]
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1962407457]
+scroll_scale = Vector2(0.7, 0.7)
+
+[node name="9FondoDithering" type="Sprite2D" parent="Parallax2D2" unique_id=1149904835]
+texture = ExtResource("1_ade6e")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=528286205]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="7Nubes" type="Sprite2D" parent="Parallax2D3" unique_id=758635888]
+texture = ExtResource("2_joogd")
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=714168796]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="6Mestita" type="Sprite2D" parent="Parallax2D4" unique_id=1689562249]
+texture = ExtResource("3_82or6")
+
+[node name="Parallax2D5" type="Parallax2D" parent="." unique_id=1896729331]
+scroll_scale = Vector2(0.2, 0.2)
+
+[node name="5ArbolesAtras" type="Sprite2D" parent="Parallax2D5" unique_id=156445]
+texture = ExtResource("4_l7wyk")
+
+[node name="Parallax2D6" type="Parallax2D" parent="." unique_id=1764955729]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="4Lomitas" type="Sprite2D" parent="Parallax2D6" unique_id=779141562]
+texture = ExtResource("5_cq6xx")
+
+[node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1113775047]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="3Piso" type="Sprite2D" parent="Parallax2D7" unique_id=1238912618]
+texture = ExtResource("6_v85kb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Parallax2D7" unique_id=1129021868]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parallax2D7/StaticBody2D" unique_id=1004123837]
+position = Vector2(-35.5, 1215)
+shape = SubResource("RectangleShape2D_82or6")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=279214056]
+scroll_scale = Vector2(0.2, 0.2)
+
+[node name="8Luna" type="Sprite2D" parent="Parallax2D" unique_id=346437448]
+texture = ExtResource("7_71fi2")
+
+[node name="Parallax2D8" type="Parallax2D" parent="." unique_id=739038817]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="1RocasYPlantas" type="Sprite2D" parent="Parallax2D8" unique_id=1984079057]
+texture = ExtResource("8_qwj6g")
+
+[node name="Player" parent="." unique_id=1650520485 instance=ExtResource("9_joogd")]
+position = Vector2(-986, 897)
+scale = Vector2(2, 2)
