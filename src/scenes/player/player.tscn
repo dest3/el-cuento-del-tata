@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://fq2yplf0f2a5"]
 
 [ext_resource type="Script" uid="uid://bjci8a3508w2l" path="res://src/scripts/player/player.gd" id="1_swhsd"]
-[ext_resource type="Texture2D" uid="uid://b1yvs8n04cori" path="res://icon.svg" id="2_qopur"]
+[ext_resource type="Texture2D" uid="uid://bqdljo1isx6iy" path="res://assets/sprites/Personaje/Niñitegauche Animaciones-Idlesheet.png" id="2_n52bt"]
 [ext_resource type="Texture2D" uid="uid://dlc2pcbt1rbnd" path="res://assets/textures/512x512 textures  (1).png" id="3_n52bt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qopur"]
@@ -11,15 +11,23 @@ size = Vector2(122, 124)
 points = PackedVector2Array(245, 68, 0, 0, 241, -73)
 
 [node name="Player" type="CharacterBody2D" unique_id=1650520485]
+scale = Vector2(5, 5)
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_swhsd")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=367454266]
-texture = ExtResource("2_qopur")
+scale = Vector2(4, 4)
+texture = ExtResource("2_n52bt")
+hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186074996]
 shape = SubResource("RectangleShape2D_qopur")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1289135866]
+position = Vector2(-35, 18)
+collision_layer = 2
+collision_mask = 3
 
 [node name="ligth" type="CollisionShape2D" parent="Area2D" unique_id=204773319]
 position = Vector2(63, -1)
@@ -36,5 +44,9 @@ texture_scale = 0.9
 height = 219.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2126642249]
+zoom = Vector2(0.3, 0.3)
+limit_left = -14400
+limit_bottom = 1350
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

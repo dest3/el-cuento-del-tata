@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b0hflyjhg42i8"]
+
+[ext_resource type="Script" uid="uid://dqhx2ws75owiw" path="res://src/scripts/levels/player_selection.gd" id="1_y81bj"]
+[ext_resource type="PackedScene" uid="uid://csojis7w72dx5" path="res://src/scenes/levels/lvl_1.tscn" id="2_3dy4p"]
+[ext_resource type="Texture2D" uid="uid://2r4uohsdx27o" path="res://assets/sprites/Personaje/Niñitegauche1.png" id="2_dh5ip"]
+
+[node name="Player selection" type="Control" unique_id=687439444]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y81bj")
+first_level = ExtResource("2_3dy4p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1745695081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -484.0
+offset_top = -173.5
+offset_right = 484.0
+offset_bottom = 173.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1491440786]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "elegi tu personaje "
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=565502619]
+layout_mode = 2
+
+[node name="Player_1" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=267691704]
+layout_mode = 2
+texture_normal = ExtResource("2_dh5ip")
+
+[node name="Player_2" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=376921968]
+layout_mode = 2
+texture_normal = ExtResource("2_dh5ip")
+
+[node name="Player_3" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=627288037]
+layout_mode = 2
+texture_normal = ExtResource("2_dh5ip")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Player_1" to="." method="_on_player_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Player_2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Player_3" to="." method="_on_player_3_pressed"]

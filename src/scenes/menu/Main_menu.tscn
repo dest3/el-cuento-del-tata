@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4kbg71ygne3q"]
 
 [ext_resource type="Script" uid="uid://bsy7jp1ubkwyt" path="res://src/scripts/menu/main_menu.gd" id="1_sqvje"]
-[ext_resource type="PackedScene" uid="uid://bw53h5g824csd" path="res://src/scenes/main.tscn" id="2_xelex"]
+[ext_resource type="PackedScene" uid="uid://b0hflyjhg42i8" path="res://src/scenes/levels/player_selection.tscn" id="2_xelex"]
 
 [node name="MainMenu" type="Control" unique_id=527244942]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sqvje")
-first_level = ExtResource("2_xelex")
+player_selection = ExtResource("2_xelex")
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1109173798]
 layout_mode = 1
@@ -35,12 +35,18 @@ horizontal_alignment = 1
 [node name="Play" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=589517936]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "play"
+text = "jugar"
+
+[node name="Settings" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=473341476]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "preferencias"
 
 [node name="Quit" type="Button" parent="AspectRatioContainer/VBoxContainer" unique_id=1565404149]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "quit"
+text = "salir"
 
 [connection signal="pressed" from="AspectRatioContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
