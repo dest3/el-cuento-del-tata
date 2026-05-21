@@ -17,15 +17,17 @@ collision_mask = 5
 script = ExtResource("1_swhsd")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=367454266]
+position = Vector2(1.3999999, -51.999996)
 scale = Vector2(4, 4)
 texture = ExtResource("2_n52bt")
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186074996]
+position = Vector2(1.3999999, -51.999996)
 shape = SubResource("RectangleShape2D_qopur")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1289135866]
-position = Vector2(-35, 18)
+position = Vector2(-25.8, -36.2)
 collision_layer = 2
 collision_mask = 3
 
@@ -44,9 +46,13 @@ texture_scale = 0.9
 height = 219.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2126642249]
+position = Vector2(1.4, -156.79999)
+ignore_rotation = false
 zoom = Vector2(0.3, 0.3)
 limit_left = -14400
 limit_bottom = 1350
+position_smoothing_enabled = true
+drag_right_margin = 0.8
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

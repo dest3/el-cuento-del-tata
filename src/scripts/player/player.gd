@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var icon: Sprite2D = $Icon
 
 @onready var ligth: CollisionShape2D = $Area2D/ligth
 @onready var area_2d: Area2D = $Area2D
@@ -18,6 +19,10 @@ func movement():
 	var direction := Input.get_axis("move_left","move_right") 
 	if direction:#si existe input del jugador
 		velocity.x = direction * SPEED# aplica la velocidad de movimiento en la direccion del movimiento 
+		if velocity.x < 0:
+			icon.flip_h = true
+		else:
+			icon.flip_h = false
 	else:
 		#si no hay input vuelve la velocidad a 0 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -33,23 +38,19 @@ func aplly_gravity(delta):
 
 func ligth_controler():
 	##hace que la luz apunte al mouse todo el tiempo 
-	#if ligth:
-		#var mouse = get_global_mouse_position()
-		#area_2d.look_at(mouse)
-
 	if ligth:
-		var mouse = get_global_mouse_position()
+		# rango permitido (en grados)
+		var max_angle = deg_to_rad(15)#limite en el que se puede mover la linterna 
 
 		# dirección del jugador al mouse
-		var direction = mouse - global_position
+		var mouse = get_global_mouse_position() # obtiene el vector2 del mouse
+		var direction = mouse - global_position # calcula la diferencia del mouse al jugador
 		
 		# obtiene el ángulo hacia el mouse
 		var angle = direction.angle()
 
-		# rango permitido (en grados)
-		var max_angle = deg_to_rad(10)
-
 		# limitar el ángulo
+		#TODO lerp_angle el valor 
 		angle = clamp(angle, -max_angle, max_angle)
 
 		# aplicar rotación
