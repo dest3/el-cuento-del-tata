@@ -62,6 +62,7 @@ repeat_times = 2
 follow_viewport = false
 
 [node name="4Lomitas" type="Sprite2D" parent="Parallax2D6" unique_id=779141562]
+modulate = Color(0.78352344, 0.7835234, 0.7835234, 1)
 texture = ExtResource("5_cq6xx")
 
 [node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1113775047]
@@ -71,6 +72,7 @@ repeat_times = 2
 follow_viewport = false
 
 [node name="3Piso" type="Sprite2D" parent="Parallax2D7" unique_id=1238912618]
+modulate = Color(0.78352344, 0.7835234, 0.7835234, 1)
 texture = ExtResource("6_v85kb")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=279214056]
@@ -79,6 +81,7 @@ repeat_times = 2
 follow_viewport = false
 
 [node name="8Luna" type="Sprite2D" parent="Parallax2D" unique_id=346437448]
+modulate = Color(0.9219859, 0.9219859, 0.9219859, 1)
 z_index = 9
 texture = ExtResource("7_71fi2")
 
