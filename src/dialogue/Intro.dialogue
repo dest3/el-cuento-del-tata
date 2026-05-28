@@ -1,0 +1,108 @@
+~ start
+
+Abuelo: Acercate al fuego, gurí... que esta noche te voy a contar una historia.
+Abuelo: Una historia vieja... de esas que se cuentan bajito cuando el monte queda en silencio.
+
+Nieto: ¿Otra vez una historia de miedo, tata?
+
+- ¡Sí! Contame una de miedo.
+	Abuelo: Je... sabía que ibas a decir eso.
+	=> cuento_inicio
+
+- No me gustan las historias feas...
+	Abuelo: El miedo no siempre es malo, gurí.
+	Abuelo: A veces te mantiene vivo.
+	=> cuento_inicio
+
+- Esas cosas no existen.
+	Abuelo: Todos dicen eso...
+	Abuelo: hasta que les toca escuchar algo raro en el monte.
+	=> cuento_inicio
+
+
+~ cuento_inicio
+
+Abuelo: Hace muchos años...
+Abuelo: cuando los caminos eran puro barro...
+Abuelo: y la noche se alumbraba apenas con un farol...
+
+Abuelo: había algo que hacía que la gente cerrara las puertas temprano.
+
+Abuelo: Una criatura feroz.
+Abuelo: Algo que caminaba entre los árboles cuando la luna estaba alta.
+
+Nieto: ¿Un monstruo?
+
+Abuelo: No era hombre...
+Abuelo: pero tampoco bestia.
+
+Abuelo: Algunos decían haber visto ojos rojos entre el monte.
+Abuelo: Otros escuchaban pasos pesados...
+Abuelo: como si algo enorme caminara cerca.
+
+- ¿Y cómo era?
+	=> descripcion_lobizon
+
+- ¿La gente lo podía matar?
+	=> matar_lobizon
+
+- Tata... me está dando miedo.
+	=> miedo_lobizon
+
+
+~ descripcion_lobizon
+
+Abuelo: Alto.
+Abuelo: Flaco.
+Abuelo: Con patas torcidas y un olor feo... a tierra mojada.
+
+Abuelo: Pero lo peor no eran los dientes.
+
+Abuelo: Lo peor eran los ojos.
+Abuelo: Porque parecían mirarte...
+Abuelo: como si ya supieran quién eras.
+
+=> revelacion
+
+
+~ matar_lobizon
+
+Abuelo: Algunos lo intentaron.
+
+Abuelo: Decían que las balas comunes no servían.
+Abuelo: Otros hablaban de cuchillos benditos.
+
+Abuelo: Pero el problema nunca fue encontrarlo.
+
+Abuelo: El problema...
+Abuelo: era sobrevivir al encuentro.
+
+=> revelacion
+
+
+~ miedo_lobizon
+
+Abuelo: Y hacés bien en tener miedo, gurí.
+
+Abuelo: Porque el miedo hace que uno mire dos veces las sombras.
+
+Abuelo: Y a veces...
+Abuelo: las sombras parecen devolverte la mirada.
+
+=> revelacion
+
+
+~ revelacion
+
+Abuelo: Y así fue como la gente empezó a llamarlo...
+
+Abuelo: El Lobisón.
+
+Abuelo: Hay quienes dicen...
+Abuelo: que todavía camina por estos montes.
+
+Abuelo: Y cuando uno tiene miedo...
+
+Abuelo: empieza a verlo en todas partes.
+
+=> END
