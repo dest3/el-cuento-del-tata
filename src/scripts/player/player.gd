@@ -39,7 +39,7 @@ func aplly_gravity(delta):
 func ligth_controler():
 	##hace que la luz apunte al mouse todo el tiempo 
 	if ligth:
-		# rango permitido (en grados)
+				# rango permitido (en grados)
 		var max_angle = deg_to_rad(15)#limite en el que se puede mover la linterna 
 
 		# dirección del jugador al mouse
@@ -53,8 +53,13 @@ func ligth_controler():
 		#TODO lerp_angle el valor 
 		angle = clamp(angle, -max_angle, max_angle)
 
-		# aplicar rotación
-		area_2d.rotation = angle
+		if icon.flip_h == false:
+			# aplicar rotación
+			area_2d.rotation = angle
+		else:
+			area_2d.rotation = -angle
+			
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Enemy:
