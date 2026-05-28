@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0hflyjhg42i8"]
 
 [ext_resource type="Script" uid="uid://dqhx2ws75owiw" path="res://src/scripts/levels/player_selection.gd" id="1_y81bj"]
-[ext_resource type="PackedScene" uid="uid://csojis7w72dx5" path="res://src/scenes/levels/lvl_1.tscn" id="2_3dy4p"]
+[ext_resource type="PackedScene" uid="uid://d03koh48atdti" path="res://src/scenes/levels/intro.tscn" id="2_3dy4p"]
 [ext_resource type="Texture2D" uid="uid://2r4uohsdx27o" path="res://assets/sprites/Personaje/Niñitegauche1.png" id="2_dh5ip"]
 
 [node name="Player selection" type="Control" unique_id=687439444]

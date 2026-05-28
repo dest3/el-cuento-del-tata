@@ -215,3 +215,7 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/scenes/levels/lvl_1.tscn")

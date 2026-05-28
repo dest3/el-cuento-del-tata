@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clwtyfpy1kmvr"]
 
-[ext_resource type="Script" uid="uid://dctg6ncuqtwvd" path="res://src/scenes/dialogue/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://1bdtbveyalur" path="res://src/scenes/dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
@@ -167,6 +167,14 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
+[node name="Button" type="Button" parent="Balloon/MarginContainer/PanelContainer" unique_id=716031794]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+action_mode = 0
+text = "skip..."
+
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
@@ -195,4 +203,5 @@ text = "Response example"
 unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="pressed" from="Balloon/MarginContainer/PanelContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
