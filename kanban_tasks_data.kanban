@@ -1,0 +1,103 @@
+{
+	"categories": [
+		{
+			"uuid": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "871b1ff6-658e-48c2-8abf-6d8d9ab3a339",
+			"title": "Todo",
+			"tasks": [
+				"269a1694-33a6-4b55-8613-aa72fab8b8b5",
+				"fbe222d0-1956-4809-a939-410fa1c20237",
+				"a89370e5-30ed-4f67-867f-3ca2b8441dc0",
+				"b0e168cf-1561-402a-8e12-9b86b865175f",
+				"1e4a2412-6ce3-4315-ba72-a2c7f3fa2f60",
+				"a488ffa4-ce97-4ae8-8a8b-07b673d6e872",
+				"8c66f04c-f542-469a-8f3b-5f2fc3929720"
+			]
+		},
+		{
+			"uuid": "eb601c8e-a315-4505-9001-e07d3de8f9a7",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "ce8b494f-8288-4032-9155-d5ebd7776f2e",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "269a1694-33a6-4b55-8613-aa72fab8b8b5",
+			"title": "fix lobizon animation",
+			"description": "corregir el punto de pivote de la animacion para que los pies del lobizon no se salgan del suelo cuando eset cambia",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "fbe222d0-1956-4809-a939-410fa1c20237",
+			"title": "add sounds",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": [
+				{
+					"details": "asd",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "a89370e5-30ed-4f67-867f-3ca2b8441dc0",
+			"title": "create a new enemy ",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "b0e168cf-1561-402a-8e12-9b86b865175f",
+			"title": "improve the patrol movement of the enemys",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "1e4a2412-6ce3-4315-ba72-a2c7f3fa2f60",
+			"title": "",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "a488ffa4-ce97-4ae8-8a8b-07b673d6e872",
+			"title": "fix moon paralax",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "8c66f04c-f542-469a-8f3b-5f2fc3929720",
+			"title": "revisar el texto con jen",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"871b1ff6-658e-48c2-8abf-6d8d9ab3a339"
+			],
+			[
+				"eb601c8e-a315-4505-9001-e07d3de8f9a7"
+			],
+			[
+				"ce8b494f-8288-4032-9155-d5ebd7776f2e"
+			]
+		]
+	}
+}
