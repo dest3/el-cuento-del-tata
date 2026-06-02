@@ -17,7 +17,12 @@
 				"b0e168cf-1561-402a-8e12-9b86b865175f",
 				"1e4a2412-6ce3-4315-ba72-a2c7f3fa2f60",
 				"a488ffa4-ce97-4ae8-8a8b-07b673d6e872",
-				"8c66f04c-f542-469a-8f3b-5f2fc3929720"
+				"8c66f04c-f542-469a-8f3b-5f2fc3929720",
+				"c4f6139b-5bde-46ec-9e6e-13841260a0db",
+				"2d0ae1be-e008-42be-badb-415ab5bb73b4",
+				"caf4a7bf-a36b-406e-ae94-9031895f985d",
+				"bb31f69d-c503-423f-b405-ecac83a71f61",
+				"a34dc384-1169-490e-9b93-bf0a36730a25"
 			]
 		},
 		{
@@ -37,7 +42,16 @@
 			"title": "fix lobizon animation",
 			"description": "corregir el punto de pivote de la animacion para que los pies del lobizon no se salgan del suelo cuando eset cambia",
 			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
-			"steps": []
+			"steps": [
+				{
+					"details": "make the transform 1 time animation paly",
+					"done": false
+				},
+				{
+					"details": "make it flip when moving left and right",
+					"done": false
+				}
+			]
 		},
 		{
 			"uuid": "fbe222d0-1956-4809-a939-410fa1c20237",
@@ -82,6 +96,63 @@
 		{
 			"uuid": "8c66f04c-f542-469a-8f3b-5f2fc3929720",
 			"title": "revisar el texto con jen",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "c4f6139b-5bde-46ec-9e6e-13841260a0db",
+			"title": "create end of level ",
+			"description": "el nivel termina cuando el nene llega a la casa?\n",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "2d0ae1be-e008-42be-badb-415ab5bb73b4",
+			"title": "animate cloud paralax layer",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": []
+		},
+		{
+			"uuid": "caf4a7bf-a36b-406e-ae94-9031895f985d",
+			"title": "make the menu look bonito ",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": [
+				{
+					"details": "change logo ",
+					"done": false
+				},
+				{
+					"details": "change font",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "bb31f69d-c503-423f-b405-ecac83a71f61",
+			"title": "create preference scene",
+			"description": "",
+			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
+			"steps": [
+				{
+					"details": "audio bar to control de audio",
+					"done": false
+				},
+				{
+					"details": "music on/off",
+					"done": false
+				},
+				{
+					"details": "bind controls",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "a34dc384-1169-490e-9b93-bf0a36730a25",
+			"title": "fix player light when looking to the left",
 			"description": "",
 			"category": "496ccc99-43ff-452f-b15e-f1eff7238abd",
 			"steps": []
