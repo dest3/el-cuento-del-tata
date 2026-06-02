@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://23lkoi8s1kvu"]
+
+[ext_resource type="Script" uid="uid://dldl32bukdkos" path="res://src/scripts/menu/setings.gd" id="1_ngh72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngh72"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Setings" type="Control" unique_id=883001121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ngh72")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=242586324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=664722344]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=567414843]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=80089447]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Volume_lb" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1039932283]
+layout_mode = 2
+text = "Volumen : "
+
+[node name="Volume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=447731488]
+layout_mode = 2
+
+[node name="Mute_lb" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=951087954]
+layout_mode = 2
+text = "Mute"
+
+[node name="Mute_volume" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1518897826]
+layout_mode = 2
+
+[node name="Full_screen_lb" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=915730160]
+layout_mode = 2
+text = "pantalla completa: on/off"
+
+[node name="Full_screen" type="CheckBox" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1189243310]
+layout_mode = 2
+
+[node name="resolution_lb" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1136137132]
+layout_mode = 2
+text = "opciones de resolucion:"
+
+[node name="Resolution_option" type="OptionButton" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1894972537]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "1152x648"
+popup/item_0/id = 3
+popup/item_1/text = "1280x720"
+popup/item_1/id = 2
+popup/item_2/text = "1600x900"
+popup/item_2/id = 1
+popup/item_3/text = "1920x1080"
+popup/item_3/id = 0
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1219163702]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1849763283]
+layout_mode = 2
+text = "configuracion de botones"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=264854449]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=279198921]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1410186200]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Action_list" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2012330395]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Input_button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer/Action_list" unique_id=127830630]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ngh72")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ngh72")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer/Action_list/Input_button" unique_id=1538782285]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer/Action_list/Input_button/MarginContainer" unique_id=800341710]
+layout_mode = 2
+
+[node name="Label_action" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer/Action_list/Input_button/MarginContainer/HBoxContainer" unique_id=328968250]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 25
+text = "action name"
+vertical_alignment = 1
+
+[connection signal="value_changed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/Mute_volume" to="." method="_on_mute_volume_toggled"]
+[connection signal="toggled" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/Full_screen" to="." method="_on_full_screen_toggled"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/Resolution_option" to="." method="_on_resolution_option_item_selected"]

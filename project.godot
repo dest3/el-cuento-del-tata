@@ -23,6 +23,10 @@ DialogueManager="*uid://c3rodes2l3gxb"
 
 runtime/balloon_path="res://src/scenes/dialogue/balloon.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg")

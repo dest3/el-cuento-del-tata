@@ -21,14 +21,15 @@
 				"c4f6139b-5bde-46ec-9e6e-13841260a0db",
 				"2d0ae1be-e008-42be-badb-415ab5bb73b4",
 				"caf4a7bf-a36b-406e-ae94-9031895f985d",
-				"bb31f69d-c503-423f-b405-ecac83a71f61",
 				"a34dc384-1169-490e-9b93-bf0a36730a25"
 			]
 		},
 		{
 			"uuid": "eb601c8e-a315-4505-9001-e07d3de8f9a7",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"bb31f69d-c503-423f-b405-ecac83a71f61"
+			]
 		},
 		{
 			"uuid": "ce8b494f-8288-4032-9155-d5ebd7776f2e",
@@ -138,15 +139,23 @@
 			"steps": [
 				{
 					"details": "audio bar to control de audio",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "music on/off",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "bind controls",
 					"done": false
+				},
+				{
+					"details": "resolution selection",
+					"done": true
+				},
+				{
+					"details": "mute toggle",
+					"done": true
 				}
 			]
 		},
