@@ -3,10 +3,10 @@ extends Control
 @onready var input_button_scene = preload("res://src/scenes/menu/input_button.tscn")
 @onready var action_list = $PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/ScrollContainer/Action_list
 
-var is_remapping = false
+var is_remapping : bool = false
 var action_to_remap : StringName 
 var remaping_button : Button = null
-var input_actions ={
+var input_actions: Dictionary = {
 	"move_right": "derecha",
 	"move_left": "izquierda",
 	"move_up": "saltar",
@@ -72,7 +72,7 @@ func _on_input_button_pressed(button, action):
 func _input(event) -> void:
 	if is_remapping:
 		if event is InputEventKey && event.pressed:
-			InputMap.action_erase_event(action_to_remap,event)
+			InputMap.action_erase_events(action_to_remap)
 			InputMap.action_add_event(action_to_remap,event)
 			_update_action_list(remaping_button, event)
 			
