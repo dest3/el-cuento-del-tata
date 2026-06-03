@@ -27,14 +27,14 @@
 		{
 			"uuid": "eb601c8e-a315-4505-9001-e07d3de8f9a7",
 			"title": "Doing",
-			"tasks": [
-				"bb31f69d-c503-423f-b405-ecac83a71f61"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "ce8b494f-8288-4032-9155-d5ebd7776f2e",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"bb31f69d-c503-423f-b405-ecac83a71f61"
+			]
 		}
 	],
 	"tasks": [
@@ -147,7 +147,7 @@
 				},
 				{
 					"details": "bind controls",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "resolution selection",
