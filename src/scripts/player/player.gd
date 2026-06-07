@@ -1,28 +1,26 @@
 extends CharacterBody2D
 
 @onready var icon: Sprite2D = $Icon
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var ligth: CollisionShape2D = $Area2D/ligth
 @onready var area_2d: Area2D = $Area2D
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var SPEED = 300.0
 @export var jump_force = 300
-
+var direction:float
 func _physics_process(delta: float) -> void:
 	movement()
 	ligth_controler()
 	aplly_gravity(delta)
 	jump()
+	handle_animations()
+	print(velocity.x)
 
 func movement():
 	#obtiene un vector 2 con el input del jugador
-	var direction := Input.get_axis("move_left","move_right") 
+	direction = Input.get_axis("move_left","move_right") 
 	if direction:#si existe input del jugador
 		velocity.x = direction * SPEED# aplica la velocidad de movimiento en la direccion del movimiento 
-		if velocity.x < 0:
-			icon.flip_h = true
-		else:
-			icon.flip_h = false
 	else:
 		#si no hay input vuelve la velocidad a 0 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -67,6 +65,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			body.animation_player.play("changing")
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body is Enemy:
-		if body.has_changed == false:
-			body.animation_player.stop(true)
+	pass
+	#if body is Enemy:
+		#if body.has_changed == false:
+			#body.animation_player.stop(true
+
+func handle_animations() -> void:
+	if velocity.x  > 0 :
+		animation_player.play("walk_right")
+	
+	elif velocity.x < 0:
+		animation_player.play("walk_left")
+	else:
+		animation_player.play("Idle")
+	

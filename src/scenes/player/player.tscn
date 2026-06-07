@@ -1,14 +1,182 @@
 [gd_scene format=3 uid="uid://fq2yplf0f2a5"]
 
 [ext_resource type="Script" uid="uid://bjci8a3508w2l" path="res://src/scripts/player/player.gd" id="1_swhsd"]
-[ext_resource type="Texture2D" uid="uid://bqdljo1isx6iy" path="res://assets/sprites/Personaje/Niñitegauche Animaciones-Idlesheet.png" id="2_n52bt"]
+[ext_resource type="Texture2D" uid="uid://bf1dd6pev7xwq" path="res://assets/sprites/Personaje/Niñitegauche Animaciones-Idlesheetrres.png" id="2_n52bt"]
 [ext_resource type="Texture2D" uid="uid://dlc2pcbt1rbnd" path="res://assets/textures/512x512 textures  (1).png" id="3_n52bt"]
+[ext_resource type="Texture2D" uid="uid://d3vsq531rf18b" path="res://assets/sprites/Personaje/Niñitegauche Animaciones-walksheet.png" id="4_cx3ie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qopur"]
-size = Vector2(122, 124)
+size = Vector2(128.4, 271.59998)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qopur"]
 points = PackedVector2Array(245, 68, 0, 0, 241, -73)
+
+[sub_resource type="Animation" id="Animation_cx3ie"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_n52bt")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666669, 0.36318052, 0.6, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 0.48296857, 0.6372803),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_n52bt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_n52bt")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lh6av"]
+resource_name = "walk_left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_cx3ie")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.4, 0.6333333, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6gf5d"]
+resource_name = "walk_right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_cx3ie")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.4, 0.6333333, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6gf5d"]
+_data = {
+&"Idle": SubResource("Animation_cx3ie"),
+&"RESET": SubResource("Animation_n52bt"),
+&"walk_left": SubResource("Animation_lh6av"),
+&"walk_right": SubResource("Animation_6gf5d")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=1650520485]
 scale = Vector2(5, 5)
@@ -18,26 +186,27 @@ script = ExtResource("1_swhsd")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=367454266]
 position = Vector2(1.3999999, -51.999996)
-scale = Vector2(4, 4)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_n52bt")
+flip_h = true
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186074996]
-position = Vector2(1.3999999, -51.999996)
+position = Vector2(0, -68.799995)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_qopur")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1289135866]
-position = Vector2(-25.8, -36.2)
 collision_layer = 2
 collision_mask = 3
 
 [node name="ligth" type="CollisionShape2D" parent="Area2D" unique_id=204773319]
-position = Vector2(63, -1)
+position = Vector2(49.09204, -32.90793)
 shape = SubResource("ConvexPolygonShape2D_qopur")
 debug_color = Color(0.6760033, 0.5061017, 0.029652009, 0.41960785)
 
 [node name="PointLight2D" type="PointLight2D" parent="Area2D" unique_id=1451061099]
-position = Vector2(300.00003, -5.000001)
+position = Vector2(268.8921, -21.707932)
 rotation = 1.5422064
 color = Color(1, 1, 0.33333334, 1)
 energy = 3.05
@@ -46,13 +215,16 @@ texture_scale = 0.9
 height = 219.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2126642249]
-position = Vector2(1.4, -156.79999)
+position = Vector2(6, -180.8)
 ignore_rotation = false
 zoom = Vector2(0.3, 0.3)
 limit_left = -14400
 limit_bottom = 1350
 position_smoothing_enabled = true
 drag_right_margin = 0.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1280093268]
+libraries/ = SubResource("AnimationLibrary_6gf5d")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
