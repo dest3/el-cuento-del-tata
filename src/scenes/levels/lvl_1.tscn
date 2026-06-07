@@ -19,80 +19,81 @@ size = Vector2(3240, 344)
 
 [node name="lvl1" type="Node2D" unique_id=1888748096]
 
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1962407457]
+[node name="Paralax" type="Node2D" parent="." unique_id=1546727596]
+
+[node name="Parallax2D2" type="Parallax2D" parent="Paralax" unique_id=1962407457]
 scroll_scale = Vector2(0.7, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="9FondoDithering" type="Sprite2D" parent="Parallax2D2" unique_id=1149904835]
+[node name="9FondoDithering" type="Sprite2D" parent="Paralax/Parallax2D2" unique_id=1149904835]
 texture = ExtResource("1_ade6e")
 
-[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=528286205]
+[node name="Parallax2D3" type="Parallax2D" parent="Paralax" unique_id=528286205]
 scroll_scale = Vector2(0.5, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
-follow_viewport = false
 
-[node name="7Nubes" type="Sprite2D" parent="Parallax2D3" unique_id=758635888]
+[node name="7Nubes" type="Sprite2D" parent="Paralax/Parallax2D3" unique_id=758635888]
 texture = ExtResource("2_joogd")
 
-[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=714168796]
+[node name="Parallax2D4" type="Parallax2D" parent="Paralax" unique_id=714168796]
 scroll_scale = Vector2(0.3, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="6Mestita" type="Sprite2D" parent="Parallax2D4" unique_id=1689562249]
+[node name="6Mestita" type="Sprite2D" parent="Paralax/Parallax2D4" unique_id=1689562249]
 texture = ExtResource("3_82or6")
 
-[node name="Parallax2D5" type="Parallax2D" parent="." unique_id=1896729331]
+[node name="Parallax2D5" type="Parallax2D" parent="Paralax" unique_id=1896729331]
 scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="5ArbolesAtras" type="Sprite2D" parent="Parallax2D5" unique_id=156445]
+[node name="5ArbolesAtras" type="Sprite2D" parent="Paralax/Parallax2D5" unique_id=156445]
 texture = ExtResource("4_l7wyk")
 
-[node name="Parallax2D6" type="Parallax2D" parent="." unique_id=1764955729]
+[node name="Parallax2D6" type="Parallax2D" parent="Paralax" unique_id=1764955729]
 scroll_scale = Vector2(0.1, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="4Lomitas" type="Sprite2D" parent="Parallax2D6" unique_id=779141562]
+[node name="4Lomitas" type="Sprite2D" parent="Paralax/Parallax2D6" unique_id=779141562]
 modulate = Color(0.78352344, 0.7835234, 0.7835234, 1)
 texture = ExtResource("5_cq6xx")
 
-[node name="Parallax2D7" type="Parallax2D" parent="." unique_id=1113775047]
+[node name="Parallax2D7" type="Parallax2D" parent="Paralax" unique_id=1113775047]
 scroll_scale = Vector2(0.3, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="3Piso" type="Sprite2D" parent="Parallax2D7" unique_id=1238912618]
+[node name="3Piso" type="Sprite2D" parent="Paralax/Parallax2D7" unique_id=1238912618]
 modulate = Color(0.78352344, 0.7835234, 0.7835234, 1)
 texture = ExtResource("6_v85kb")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=279214056]
+[node name="Parallax2D" type="Parallax2D" parent="Paralax" unique_id=279214056]
 scroll_scale = Vector2(0.2, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="8Luna" type="Sprite2D" parent="Parallax2D" unique_id=346437448]
+[node name="8Luna" type="Sprite2D" parent="Paralax/Parallax2D" unique_id=346437448]
 modulate = Color(0.9219859, 0.9219859, 0.9219859, 1)
 z_index = 9
 texture = ExtResource("7_71fi2")
 
-[node name="Parallax2D8" type="Parallax2D" parent="." unique_id=739038817]
+[node name="Parallax2D8" type="Parallax2D" parent="Paralax" unique_id=739038817]
 z_index = 10
 scroll_scale = Vector2(0.1, 0)
 repeat_size = Vector2(9600, 0)
 repeat_times = 2
 follow_viewport = false
 
-[node name="1RocasYPlantas" type="Sprite2D" parent="Parallax2D8" unique_id=1984079057]
+[node name="1RocasYPlantas" type="Sprite2D" parent="Paralax/Parallax2D8" unique_id=1984079057]
 texture = ExtResource("8_qwj6g")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1129021868]
@@ -122,5 +123,16 @@ shape = SubResource("RectangleShape2D_joogd")
 position = Vector2(-11202.001, 750)
 SPEED = 1000.0
 
-[node name="Path2D" parent="." unique_id=944041902 instance=ExtResource("10_82or6")]
-position = Vector2(-6869, 758)
+[node name="Enemy" parent="." unique_id=473368215 node_paths=PackedStringArray("waypoints") instance=ExtResource("10_82or6")]
+position = Vector2(1042.0007, 213.00002)
+scale = Vector2(10, 10)
+speed = 600.0
+waypoints = [NodePath("../Waypoint/Waypoint"), NodePath("../Waypoint/Waypoint2")]
+
+[node name="Waypoint" type="Node2D" parent="." unique_id=1226800621]
+
+[node name="Waypoint" type="Marker2D" parent="Waypoint" unique_id=257030821]
+position = Vector2(-9195, 590)
+
+[node name="Waypoint2" type="Marker2D" parent="Waypoint" unique_id=958253217]
+position = Vector2(327, 421)
