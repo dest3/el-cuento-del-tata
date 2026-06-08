@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dqhx2ws75owiw" path="res://src/scripts/levels/player_selection.gd" id="1_y81bj"]
 [ext_resource type="PackedScene" uid="uid://d03koh48atdti" path="res://src/scenes/levels/intro.tscn" id="2_3dy4p"]
-[ext_resource type="Texture2D" uid="uid://2r4uohsdx27o" path="res://assets/sprites/Personaje/Niñitegauche1.png" id="2_dh5ip"]
+[ext_resource type="Texture2D" uid="uid://b5xq2gw025art" path="res://assets/sprites/Select de personajes/Niñita gaucha.png" id="3_2x83t"]
+[ext_resource type="Texture2D" uid="uid://csytjikaednhu" path="res://assets/sprites/Select de personajes/Niñite_gauche.png" id="4_re10t"]
+[ext_resource type="Texture2D" uid="uid://bi102sy0dvl6w" path="res://assets/sprites/Select de personajes/Niñito_gaucho.png" id="5_2m3k2"]
 
 [node name="Player selection" type="Control" unique_id=687439444]
 layout_mode = 3
@@ -39,15 +41,15 @@ layout_mode = 2
 
 [node name="Player_1" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=267691704]
 layout_mode = 2
-texture_normal = ExtResource("2_dh5ip")
+texture_normal = ExtResource("3_2x83t")
 
 [node name="Player_2" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=376921968]
 layout_mode = 2
-texture_normal = ExtResource("2_dh5ip")
+texture_normal = ExtResource("4_re10t")
 
 [node name="Player_3" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=627288037]
 layout_mode = 2
-texture_normal = ExtResource("2_dh5ip")
+texture_normal = ExtResource("5_2m3k2")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Player_1" to="." method="_on_player_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Player_2" to="." method="_on_player_2_pressed"]
